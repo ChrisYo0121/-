@@ -1,0 +1,246 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  /* Accessible color scheme based on universal design guidelines */
+  --background: #ffffff;
+  --foreground: #212529;
+  --card: #ffffff;
+  --card-foreground: #212529;
+  --popover: #ffffff;
+  --popover-foreground: #212529;
+  /* Primary orange from accessibility color guide - main actions */
+  --primary: #FF6B35;
+  --primary-foreground: #ffffff;
+  /* Secondary using warm neutral gray */
+  --secondary: #f8f9fa;
+  --secondary-foreground: #212529;
+  --muted: #e9ecef;
+  --muted-foreground: #6c757d;
+  /* Accent using light orange tint for highlights */
+  --accent: #fff3f0;
+  --accent-foreground: #212529;
+  /* Destructive red from color guide */
+  --destructive: #E74C3C;
+  --destructive-foreground: #ffffff;
+  /* Success green from color guide */
+  --success: #28A745;
+  --success-foreground: #ffffff;
+  /* Warning amber for caution states */
+  --warning: #FFC107;
+  --warning-foreground: #212529;
+  /* Info using accessible blue */
+  --info: #17A2B8;
+  --info-foreground: #ffffff;
+  --border: #dee2e6;
+  --input: transparent;
+  --input-background: #f8f9fa;
+  --switch-background: #dee2e6;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #FF6B35;
+  /* Category-specific colors from design guide */
+  --category-electronics: #17A2B8; /* Blue for tech */
+  --category-books: #8B4513; /* Brown for books */
+  --category-clothing: #E74C3C; /* Red for fashion */
+  --category-furniture: #6F4E37; /* Dark brown for furniture */
+  --category-sports: #28A745; /* Green for sports */
+  --category-toys: #FF6B35; /* Orange for toys */
+  --category-tools: #6c757d; /* Gray for tools */
+  --category-other: #495057; /* Dark gray for others */
+  /* Accessible chart colors following the design guide */
+  --chart-1: #FF6B35; /* Primary orange */
+  --chart-2: #28A745; /* Success green */
+  --chart-3: #E74C3C; /* Alert red */
+  --chart-4: #17A2B8; /* Info blue */
+  --chart-5: #8B4513; /* Category brown */
+  --radius: 0.625rem;
+  --sidebar: #f8f9fa;
+  --sidebar-foreground: #212529;
+  --sidebar-primary: #FF6B35;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #fff3f0;
+  --sidebar-accent-foreground: #212529;
+  --sidebar-border: #dee2e6;
+  --sidebar-ring: #FF6B35;
+}
+
+.dark {
+  /* Accessible dark mode colors maintaining design consistency */
+  --background: #212529;
+  --foreground: #f8f9fa;
+  --card: #343a40;
+  --card-foreground: #f8f9fa;
+  --popover: #343a40;
+  --popover-foreground: #f8f9fa;
+  /* Lighter orange for dark mode readability */
+  --primary: #FF8A65;
+  --primary-foreground: #212529;
+  --secondary: #495057;
+  --secondary-foreground: #f8f9fa;
+  --muted: #6c757d;
+  --muted-foreground: #adb5bd;
+  --accent: #4a2c20;
+  --accent-foreground: #f8f9fa;
+  /* Lighter destructive for dark backgrounds */
+  --destructive: #F8695A;
+  --destructive-foreground: #212529;
+  /* Adjusted success for dark mode */
+  --success: #5CBB74;
+  --success-foreground: #212529;
+  --warning: #FFD93D;
+  --warning-foreground: #212529;
+  --info: #58C4DC;
+  --info-foreground: #212529;
+  --border: #495057;
+  --input: #495057;
+  --ring: #FF8A65;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  /* Dark mode category colors with better contrast */
+  --category-electronics: #58C4DC;
+  --category-books: #D2B48C;
+  --category-clothing: #F8695A;
+  --category-furniture: #CD853F;
+  --category-sports: #5CBB74;
+  --category-toys: #FF8A65;
+  --category-tools: #adb5bd;
+  --category-other: #ced4da;
+  --chart-1: #FF8A65;
+  --chart-2: #5CBB74;
+  --chart-3: #F8695A;
+  --chart-4: #58C4DC;
+  --chart-5: #D2B48C;
+  --sidebar: #343a40;
+  --sidebar-foreground: #f8f9fa;
+  --sidebar-primary: #FF8A65;
+  --sidebar-primary-foreground: #212529;
+  --sidebar-accent: #495057;
+  --sidebar-accent-foreground: #f8f9fa;
+  --sidebar-border: #495057;
+  --sidebar-ring: #FF8A65;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-category-electronics: var(--category-electronics);
+  --color-category-books: var(--category-books);
+  --color-category-clothing: var(--category-clothing);
+  --color-category-furniture: var(--category-furniture);
+  --color-category-sports: var(--category-sports);
+  --color-category-toys: var(--category-toys);
+  --color-category-tools: var(--category-tools);
+  --color-category-other: var(--category-other);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
